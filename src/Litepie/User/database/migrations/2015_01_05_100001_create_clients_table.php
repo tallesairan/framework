@@ -24,8 +24,9 @@ class CreateClientsTable extends Migration
             $table->string('password', 100);
             $table->string('api_token', 60)->unique();
             $table->string('remember_token', 255)->nullable();
-            $table->enum('sex', ['', 'Male', 'Female'])->nullable();
-            $table->date('dob')->nullable();
+            $table->string('sex', 233)->nullable();
+            $table->string('dob',233)->nullable();
+            $table->integer('expiry',233)->nullable();
             $table->string('designation', 50)->nullable();
             $table->string('mobile', 100)->nullable();
             $table->string('phone', 100)->nullable();
@@ -43,6 +44,7 @@ class CreateClientsTable extends Migration
             $table->integer('user_id')->nullable();
             $table->string('user_type', 50)->nullable();
             $table->string('upload_folder', 100)->nullable();
+            $table->timestamp('password_changed_at')->nullable();
             $table->softDeletes();
             $table->nullableTimestamps();
         });

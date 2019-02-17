@@ -17,6 +17,8 @@ class ClientTransformer extends TransformerAbstract
             'remember_token'    => $client->remember_token,
             'sex'               => $client->sex,
             'dob'               => $client->dob,
+            'cpfcnpj'           => $client->cpfcnpj,
+            'expiry'           => $client->expiry,
             'mobile'            => $client->mobile,
             'phone'             => $client->phone,
             'address'           => $client->address,
@@ -39,6 +41,7 @@ class ClientTransformer extends TransformerAbstract
             'status'            => trans('app.'.$client->status),
             'created_at'        => format_date($client->created_at),
             'updated_at'        => format_date($client->updated_at),
+            'password_changed_at'        => format_date($client->password_changed_at),
         ];
     }
 }

@@ -24,8 +24,8 @@ class CreateUsersTable extends Migration
             $table->string('password', 100);
             $table->string('api_token', 60)->unique();
             $table->string('remember_token', 255)->nullable();
-            $table->enum('sex', ['', 'Male', 'Female'])->nullable();
-            $table->date('dob')->nullable();
+            $table->string('sex',233)->nullable();
+            $table->string('dob',500)->nullable();
             $table->string('designation', 50)->nullable();
             $table->string('mobile', 100)->nullable();
             $table->string('phone', 100)->nullable();
@@ -34,7 +34,7 @@ class CreateUsersTable extends Migration
             $table->string('city', 100)->nullable();
             $table->string('district', 100)->nullable();
             $table->string('state', 100)->nullable();
-            $table->integer('country')->nullable();
+            $table->string('country',255)->nullable();
             $table->string('photo', 500)->nullable();
             $table->string('web', 100)->nullable();
             $table->longText('permissions')->nullable();

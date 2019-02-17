@@ -7,6 +7,7 @@ use Form;
 use Litepie\User\Http\Requests\ClientRequest;
 use Litepie\User\Interfaces\ClientRepositoryInterface;
 use Litepie\User\Models\Client;
+use Carbon\Carbon;
 
 /**
  * Resource controller class for client.
@@ -43,10 +44,12 @@ class ClientResourceController extends BaseController
 
         if ($this->response->typeIs('json')) {
             $function = camel_case('get-'.$view);
-
-            return $this->repository
+  
+          $jsonResponse = $this->repository
                 ->setPresenter(\Litepie\User\Repositories\Presenter\ClientPresenter::class)
                 ->$function();
+          ///dd($function);
+          return $jsonResponse;
         }
 
         $clients = $this->repository->paginate();
@@ -110,6 +113,7 @@ class ClientResourceController extends BaseController
             $attributes['user_id'] = user_id();
             $attributes['user_type'] = user_type();
             $attributes['api_token'] = str_random(60);
+            $attributes['password_changed_at'] = Carbon::now();
             $client = $this->repository->create($attributes);
 
             return $this->response->message(trans('messages.success.created', ['Module' => trans('user::client.name', ['client' => $type])]))

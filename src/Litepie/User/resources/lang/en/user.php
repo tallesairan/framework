@@ -14,10 +14,11 @@ return [
      * Options for select/radio/check.
      */
     'options'               => [
-        'sex'          => [
-            'male'   => ['name' => 'sex', 'value' => 'male'],
-            'female' => ['name' => 'sex', 'value' => 'female'],
-        ],
+//        'sex'          => [
+//            'Masculino'   => ['name' => 'sex', 'value' => 'Masculino'],
+//
+//            'Feminino' => ['name' => 'sex', 'value' => 'Feminino'],
+//        ],
         'status'          => ['New'=>'New', 'Active'=>'Active', 'Suspended'=>'Suspended'],
         'reporting_to'    => ['1'],
         'department'      => ['marketing' => 'Marketing', 'accounts' => 'Accounts', 'store' => 'Store'],
