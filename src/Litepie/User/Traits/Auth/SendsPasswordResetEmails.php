@@ -17,7 +17,7 @@ trait SendsPasswordResetEmails
      */
     public function showLinkRequestForm()
     {
-        return $this->response->setMetaTitle('Forgot Password')
+        return $this->response->setMetaTitle('Recuperar senha')
             ->layout('auth')
             ->view('auth.password')
             ->output();
