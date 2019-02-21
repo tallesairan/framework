@@ -10,7 +10,8 @@ class ClientTransformer extends TransformerAbstract
     {
         return [
             'id'                => $client->getRouteKey(),
-            'name'              => $client->name,
+            'firstName'              => $client->firstName,
+            'lastName'              => $client->lastName,
             'email'             => $client->email,
             'password'          => $client->password,
             'api_token'         => $client->api_token,
@@ -21,10 +22,10 @@ class ClientTransformer extends TransformerAbstract
             'expiry'           => $client->expiry,
             'mobile'            => $client->mobile,
             'phone'             => $client->phone,
-            'address'           => $client->address,
-            'street'            => $client->street,
+            'billingAddress1'           => $client->billingAddress1,
+            'billingAddress2'            => $client->billingAddress2,
+            'postcode'          => $client->postcode,
             'city'              => $client->city,
-            'district'          => $client->district,
             'state'             => $client->state,
             'country'           => $client->country,
             'photo'             => $client->photo,

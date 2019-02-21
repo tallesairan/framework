@@ -1,10 +1,10 @@
-{{--<button class="btn btn-xs btn-success" id="manage-column" type="button">--}}
-    {{--<i aria-hidden="true" class="fa fa-columns">--}}
-    {{--</i>--}}
-    {{--<span class="hidden-sm hidden-xs">--}}
-        {{--Columns--}}
-    {{--</span>--}}
-{{--</button>--}}
+<button class="btn btn-xs btn-success" id="manage-column" type="button">
+    <i aria-hidden="true" class="fa fa-columns">
+    </i>
+    <span class="hidden-sm hidden-xs">
+        Columns
+    </span>
+</button>
 <div class="modal fade" id="modal-manage-column">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
@@ -26,7 +26,7 @@
                     ->action(guard_url('/settings/settings'))!!}
 
                     {!!Form::checkboxes('manage_columns')
-                    ->checkboxes(trans('user::client.cloumns'))
+                    ->checkboxes(trans('user::user.cloumns'))
                     ->inline()
                     ->raw()!!}
 
@@ -88,9 +88,9 @@
         return false;
         var formData = new FormData();
         formData.append('value', $('#form-manage-column').serialize());
-        formData.append('key', 'user.client.column');
+        formData.append('key', 'user.user.column');
         formData.append('package', 'User');
-        formData.append('module', 'Client');
+        formData.append('module', 'User');
         formData.append('name', 'Column');
         $.ajax({
             url : "{!!guard_url('/settings/setting')!!}",

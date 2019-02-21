@@ -111,7 +111,8 @@
         'appends'       => ['picture'],
         'fillable' => [
           'id',
-          'name',
+          'firstName',
+          'lastName',
           'email',
           'password',
           'api_token',

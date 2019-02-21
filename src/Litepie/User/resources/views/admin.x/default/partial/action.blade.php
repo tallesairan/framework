@@ -1,40 +1,40 @@
                     <div class="btn-group">
 
-                        <button type="button" class="btn btn-xs btn-warning"><i class="fa fa-gears" aria-hidden="true"></i>&nbsp;Ações</button>
+                        <button type="button" class="btn btn-xs btn-warning"><i class="fa fa-gears" aria-hidden="true"></i>&nbsp;Actions</button>
                         <button type="button" class="btn btn-xs btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu item" role="menu">
-                            <li><a id="view-revision" style="cursor:pointer;" data-toggle="modal" data-target="#revision-modal"><i class="fa fa-fw fa-history" aria-hidden="true"></i> Revisões</a></li>
+                            <li><a id="view-revision" style="cursor:pointer;" data-toggle="modal" data-target="#revision-modal"><i class="fa fa-fw fa-history" aria-hidden="true"></i> Revisions</a></li>
 
                             <li><a id="view-workflow" style="cursor:pointer;" data-toggle="modal" data-target="#workflow-modal"><i class="fa fa-fw fa-exchange" aria-hidden="true"></i> Workflow</a></li>
                             <li class="divider"></li>
 
-                            {{--<li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" --}}
-                            {{--data-title='Add Task'  data-url="{{guard_url('user/client/action/task/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> Add Task</a></li>--}}
+                            <li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" 
+                            data-title='Add Task'  data-url="{{guard_url('user/client/action/task/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> Add Task</a></li>
 
-                            {{--<li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" --}}
-                            {{--data-title='Add Calendar'  data-url="{{guard_url('user/client/action/calendar/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Add Calendar</a></li>--}}
-                            {{--<li class="divider"></li>--}}
+                            <li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" 
+                            data-title='Add Calendar'  data-url="{{guard_url('user/client/action/calendar/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Add Calendar</a></li>
+                            <li class="divider"></li>
 
-                            <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/client/action/print/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-print" aria-hidden="true"></i> Imprimir</a></li>
+                            <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/client/action/print/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-print" aria-hidden="true"></i> Print</a></li>
 
                             <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/client/action/pdf/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-file-pdf-o" aria-hidden="true"></i> Download PDF</a></li>
 
                             <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/client/action/excel/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-file-excel-o" aria-hidden="true"></i> Download Excel</a></li>
                             <li class="divider"></li>
 
-                            {{--<li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" --}}
-                            {{--data-title='Send mail to contact' data-url="{{guard_url('user/client/action/mail/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i> Send Mail</a></li>--}}
+                            <li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" 
+                            data-title='Send mail to contact' data-url="{{guard_url('user/client/action/mail/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i> Send Mail</a></li>
 
-                            {{--<li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" --}}
-                            {{--data-title='Send SMS to contact' data-url="{{guard_url('user/client/action/sms/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-comment-o" aria-hidden="true"></i> Send SMS</a></li>--}}
-                            {{--<li class="divider"></li>--}}
+                            <li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" 
+                            data-title='Send SMS to contact' data-url="{{guard_url('user/client/action/sms/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-comment-o" aria-hidden="true"></i> Send SMS</a></li>
+                            <li class="divider"></li>
 
-                            <li><a class="action-clone" style="cursor:pointer;" data-method="GET" data-title="Clone" data-text="Do you want to duplicate this data?" data-url="{{guard_url('user/client/action/copy/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-clone" aria-hidden="true"></i> Clonar</a></li>
+                            <li><a class="action-clone" style="cursor:pointer;" data-method="GET" data-title="Clone" data-text="Do you want to duplicate this data?" data-url="{{guard_url('user/client/action/copy/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-clone" aria-hidden="true"></i> Clone</a></li>
 
-                            <li><a class="action-method" data-method="POST" data-title="Archive" data-text="Do you want to change the status of this data?" data-url="{{guard_url('user/client/action/status/archive/'.$client->getRouteKey())}}" style="cursor:pointer;"><i class="fa fa-fw fa-archive" aria-hidden="true"></i> Arquivar</a></li>
+                            <li><a class="action-method" data-method="POST" data-title="Archive" data-text="Do you want to change the status of this data?" data-url="{{guard_url('user/client/action/status/archive/'.$client->getRouteKey())}}" style="cursor:pointer;"><i class="fa fa-fw fa-archive" aria-hidden="true"></i> Archive</a></li>
 
                         </ul>
                     </div>

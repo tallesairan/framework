@@ -3,9 +3,9 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs primary">
             <li class="active"><a href="#user" data-toggle="tab">{!! trans('user::user.tab.name') !!}</a></li>
-            <li><a href="#details" data-toggle="tab">Details</a></li>
+            <li><a href="#details" data-toggle="tab">{{ trans('app.details') }}</a></li>
             <div class="box-tools pull-right">
-                <button type="button" class="btn btn-primary btn-sm" data-action='UPDATE' data-form='#user-user-edit'  data-load-to='#user-user-entry' data-datatable='#user-user-list'><i class="fa fa-floppy-o"></i> Save</button>
+                <button type="button" class="btn btn-primary btn-sm" data-action='UPDATE' data-form='#user-user-edit'  data-load-to='#user-user-entry' data-datatable='#user-user-list'><i class="fa fa-floppy-o"></i> {{ trans('app.save') }}</button>
                 <button type="button" class="btn btn-default btn-sm" data-action='CANCEL' data-load-to='#user-user-entry' data-href='{{trans_url('admin/user/user')}}/{{$user->getRouteKey()}}'><i class="fa fa-times-circle"></i> {{ trans('app.cancel') }}</button>
             </div>
         </ul>

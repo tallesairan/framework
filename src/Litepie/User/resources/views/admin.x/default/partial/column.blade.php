@@ -1,10 +1,10 @@
-{{--<button class="btn btn-xs btn-success" id="manage-column" type="button">--}}
-    {{--<i aria-hidden="true" class="fa fa-columns">--}}
-    {{--</i>--}}
-    {{--<span class="hidden-sm hidden-xs">--}}
-        {{--Columns--}}
-    {{--</span>--}}
-{{--</button>--}}
+<button class="btn btn-xs btn-success" id="manage-column" type="button">
+    <i aria-hidden="true" class="fa fa-columns">
+    </i>
+    <span class="hidden-sm hidden-xs">
+        Columns
+    </span>
+</button>
 <div class="modal fade" id="modal-manage-column">
     <div class="modal-dialog modal-md">
         <div class="modal-content">

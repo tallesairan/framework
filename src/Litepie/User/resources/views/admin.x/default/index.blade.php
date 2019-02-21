@@ -17,8 +17,8 @@
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                     <li class="{!!(request('status') == '')?'active':'';!!}"><a href="{!!guard_url('user/'.$type)!!}">{!! trans('user::client.names', ['client' => $type]) !!}</a></li>
-                    {{--<li class="{!!(request('status') == 'archive')?'active':'';!!}"><a href="{!!guard_url('user/client?status=archive')!!}">Archived</a></li>--}}
-                    {{--<li class="{!!(request('status') == 'deleted')?'active':'';!!}"><a href="{!!guard_url('user/client?status=deleted')!!}">Trashed</a></li>--}}
+                    <li class="{!!(request('status') == 'archive')?'active':'';!!}"><a href="{!!guard_url('user/client?status=archive')!!}">Archived</a></li>
+                    <li class="{!!(request('status') == 'deleted')?'active':'';!!}"><a href="{!!guard_url('user/client?status=deleted')!!}">Trashed</a></li>
                     <li class="pull-right">
                     <span class="actions">
                     @include('user::admin.default.partial.filter')
@@ -30,23 +30,20 @@
                 <table id="user-client-list" class="table table-striped data-table">
                     <thead class="list_head">
                         <th style="text-align: right;" width="1%"><a class="btn-reset-filter" href="#Reset" style="display:none; color:#fff;"><i class="fa fa-filter"></i></a> <input type="checkbox" id="user-client-check-all"></th>
-                        <th data-field="firstName">Nome</th>
-                        <th data-field="lastName">Sobrenome</th>
+                        <th data-field="name">{!! trans('user::client.label.name')!!}</th>
                     <th data-field="email">{!! trans('user::client.label.email')!!}</th>
-                    {{--<th data-field="sex">{!! trans('user::client.label.sex')!!}</th>--}}
-                    {{--<th data-field="dob">{!! trans('user::client.label.dob')!!}</th>--}}
+                    <th data-field="sex">{!! trans('user::client.label.sex')!!}</th>
+                    <th data-field="dob">{!! trans('user::client.label.dob')!!}</th>
                     <th data-field="mobile">{!! trans('user::client.label.mobile')!!}</th>
                     <th data-field="phone">{!! trans('user::client.label.phone')!!}</th>
-                    {{--<th data-field="address">{!! trans('user::client.label.address')!!}</th>--}}
-                    {{--<th data-field="street">{!! trans('user::client.label.street')!!}</th>--}}
-                    <th data-field="postcode">CEP</th>
+                    <th data-field="address">{!! trans('user::client.label.address')!!}</th>
+                    <th data-field="street">{!! trans('user::client.label.street')!!}</th>
                     <th data-field="city">{!! trans('user::client.label.city')!!}</th>
+                    <th data-field="district">{!! trans('user::client.label.district')!!}</th>
                     <th data-field="state">{!! trans('user::client.label.state')!!}</th>
-                    {{--<th data-field="district">{!! trans('user::client.label.district')!!}</th>--}}
-                    {{--<th data-field="state">{!! trans('user::client.label.state')!!}</th>--}}
-                    {{--<th data-field="country">{!! trans('user::client.label.country')!!}</th>--}}
-                    {{--<th data-field="photo">{!! trans('user::client.label.photo')!!}</th>--}}
-                    {{--<th data-field="web">{!! trans('user::client.label.web')!!}</th>--}}
+                    <th data-field="country">{!! trans('user::client.label.country')!!}</th>
+                    <th data-field="photo">{!! trans('user::client.label.photo')!!}</th>
+                    <th data-field="web">{!! trans('user::client.label.web')!!}</th>
                     </thead>
                 </table>
             </div>
@@ -94,22 +91,20 @@ $(document).ready(function(){
 
         "columns": [
             {data :'id'},
-            {data :'firstName'},
-            {data :'lastName'},
+            {data :'name'},
             {data :'email'},
-            // {data :'sex'},
-            // {data :'dob'},
+            {data :'sex'},
+            {data :'dob'},
             {data :'mobile'},
             {data :'phone'},
-            // {data :'address'},
-            // {data :'street'},
-            {data :'postcode'},
+            {data :'address'},
+            {data :'street'},
             {data :'city'},
+            {data :'district'},
             {data :'state'},
-            // {data :'district'},
-            // {data :'country'},
-            // {data :'photo'},
-            // {data :'web'},
+            {data :'country'},
+            {data :'photo'},
+            {data :'web'},
         ],
         "pageLength": 25
     });

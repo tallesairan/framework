@@ -1,13 +1,8 @@
             <div class='row'>
                 <div class='col-md-4 col-sm-6'>
-                       {!! Form::text('firstName')
-                       -> label(trans('user::client.label.firstName'))
-                       -> placeholder(trans('user::client.placeholder.firstName'))!!}
-                </div>
-                <div class='col-md-4 col-sm-6'>
-                       {!! Form::text('lastName')
-                       -> label(trans('user::client.label.lastName'))
-                       -> placeholder(trans('user::client.placeholder.lastName'))!!}
+                       {!! Form::text('name')
+                       -> label(trans('user::client.label.name'))
+                       -> placeholder(trans('user::client.placeholder.name'))!!}
                 </div>
 
                 <div class='col-md-4 col-sm-6'>
@@ -28,29 +23,12 @@
                    -> label(trans('user::client.label.sex'))!!}
                 </div>
 
-
-                <div class='col-md-4 col-sm-6'>
-                   <div class='form-group'>
-                     <label for='cpfcnpj' class='control-label'>{!!trans('user::client.label.cpfcnpj')!!}</label>
-                        {!! Form::text('cpfcnpj')
-                        -> placeholder(trans('user::client.placeholder.cpfcnpj'))
-                        ->raw()!!}
-                   </div>
-                </div>
-                <div class='col-md-4 col-sm-6'>
-                   <div class='form-group'>
-                     <label for='expiry' class='control-label'>{!!trans('user::client.label.expiry')!!}</label>
-                        {!! Form::number('expiry')
-                        ->placeholder(trans('user::client.placeholder.expiry'))
-                        ->raw()!!}
-                   </div>
-                </div>
                 <div class='col-md-4 col-sm-6'>
                    <div class='form-group'>
                      <label for='dob' class='control-label'>{!!trans('user::client.label.dob')!!}</label>
                      <div class='input-group pickdate'>
                         {!! Form::text('dob')
-                        ->placeholder(trans('user::client.placeholder.dob'))
+                        -> placeholder(trans('user::client.placeholder.dob'))
                         ->raw()!!}
                        <span class='input-group-addon'><i class='fa fa-calendar'></i></span>
                      </div>
@@ -70,21 +48,15 @@
                 </div>
 
                 <div class='col-md-4 col-sm-6'>
-                    {!! Form::textarea ('billingAddress1')
-                    -> label(trans('user::client.label.billingAddress1'))
-                    -> placeholder(trans('user::client.placeholder.billingAddress1'))!!}
+                    {!! Form::textarea ('address')
+                    -> label(trans('user::client.label.address'))
+                    -> placeholder(trans('user::client.placeholder.address'))!!}
                 </div>
 
                 <div class='col-md-4 col-sm-6'>
-                    {!! Form::textarea ('billingAddress2')
-                    -> label(trans('user::client.label.billingAddress2'))
-                    -> placeholder(trans('user::client.placeholder.billingAddress2'))!!}
-                </div>
-
-                <div class='col-md-4 col-sm-6'>
-                       {!! Form::text('postcode')
-                       -> label(trans('user::client.label.postcode'))
-                       -> placeholder(trans('user::client.placeholder.postcode'))!!}
+                       {!! Form::text('street')
+                       -> label(trans('user::client.label.street'))
+                       -> placeholder(trans('user::client.placeholder.street'))!!}
                 </div>
 
                 <div class='col-md-4 col-sm-6'>
@@ -93,6 +65,11 @@
                        -> placeholder(trans('user::client.placeholder.city'))!!}
                 </div>
 
+                <div class='col-md-4 col-sm-6'>
+                       {!! Form::text('district')
+                       -> label(trans('user::client.label.district'))
+                       -> placeholder(trans('user::client.placeholder.district'))!!}
+                </div>
 
                 <div class='col-md-4 col-sm-6'>
                        {!! Form::text('state')

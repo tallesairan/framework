@@ -2,7 +2,7 @@
     <button class="btn btn-xs btn-danger btn-search" type="button">
         <i aria-hidden="true" class="fa fa-search">
         </i>
-        <span class="hidden-sm hidden-xs"> Search</span>
+        <span class="hidden-sm hidden-xs"> {{ trans('app.search') }}</span>
     </button>
     <button aria-expanded="false" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" type="button">
         <span class="caret">
@@ -16,32 +16,32 @@
             <a class="btn-search" style="cursor:pointer;">
                 <i aria-hidden="true" class="fa fa-fw fa-filter">
                 </i>
-                Show filters
+                Mostrar filtros
             </a>
         </li>
         <li>
             <a class="btn-reset-filter" style="cursor:pointer;">
                 <i class="fa fa-fw fa-ban text-danger">
                 </i>
-                Clear filters
+                Limpar filtros
             </a>
         </li>
         <li class="divider">
         </li>
-        <li>
-            <a class="btn-save" style="cursor:pointer;">
-                <i aria-hidden="true" class="fa fa-fw fa-floppy-o">
-                </i>
-                Save search
-            </a>
-        </li>
-        <li>
-            <a class="btn-open" style="cursor:pointer;">
-                <i aria-hidden="true" class="fa fa-fw fa-folder-open-o">
-                </i>
-                Saved searches
-            </a>
-        </li>
+        {{--<li>--}}
+            {{--<a class="btn-save" style="cursor:pointer;">--}}
+                {{--<i aria-hidden="true" class="fa fa-fw fa-floppy-o">--}}
+                {{--</i>--}}
+                {{--Salvar Busca--}}
+            {{--</a>--}}
+        {{--</li>--}}
+        {{--<li>--}}
+            {{--<a class="btn-open" style="cursor:pointer;">--}}
+                {{--<i aria-hidden="true" class="fa fa-fw fa-folder-open-o">--}}
+                {{--</i>--}}
+                {{--Buscas salvas--}}
+            {{--</a>--}}
+        {{--</li>--}}
     </ul>
 </div>
 
@@ -50,7 +50,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background-color: #dd4b39; color: #fff;">
               <button type="button" class="close" data-dismiss="modal" aaria-hidden="true">&times;</button>
-              <h4 class="modal-title">Search</h4>
+              <h4 class="modal-title">Buscar</h4>
             </div>
               {!!Form::horizontal_open()
               ->id('form-search')
@@ -223,12 +223,12 @@
                         <button aria-label="Close" class="btn pull-right btn-danger" data-dismiss="modal" type="button">
                             <i class="fa fa-times-circle">
                             </i>
-                            Close
+                            Fechar
                         </button>
                         <button class="btn btn-success pull-right " id="btn-apply-search" name="new" style="margin-right:1%" type="button">
                             <i class="fa fa-check-circle">
                             </i>
-                            Search
+                            Buscar
                         </button>
                     </div>
                 </div>
@@ -243,7 +243,7 @@
     <div class="modal-content" style="max-width:400px;">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Saved</h4>
+        <h4 class="modal-title">Salvos</h4>
       </div>
       <div class="modal-body" style="height:210px; overflow-y: auto;">
         
@@ -253,7 +253,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger"  name="Closerep" data-dismiss="modal"><i class="fa fa-times-circle"></i> Close </button>
+        <button type="button" class="btn btn-danger"  name="Closerep" data-dismiss="modal"><i class="fa fa-times-circle"></i> Fechar </button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

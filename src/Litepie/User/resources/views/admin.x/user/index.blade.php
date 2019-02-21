@@ -36,7 +36,7 @@
                     <th>{!! trans('user::user.label.email')!!}</th>
                     <th>{!! trans('user::user.label.sex')!!}</th>
                     <th>{!! trans('user::user.label.dob')!!}</th>
-                    {{--<th>{!! trans('user::user.label.designation')!!}</th>--}}
+                    <th>{!! trans('user::user.label.designation')!!}</th>
                     <th>{!! trans('user::user.label.mobile')!!}</th>
                     <th>{!! trans('user::user.label.phone')!!}</th>
                     <th>{!! trans('user::user.label.street')!!}</th>
@@ -97,7 +97,7 @@ $(document).ready(function(){
             {data :'email'},
             {data :'sex'},
             {data :'dob'},
-            // {data :'designation'},
+            {data :'designation'},
             {data :'mobile'},
             {data :'phone'},
             {data :'street'},

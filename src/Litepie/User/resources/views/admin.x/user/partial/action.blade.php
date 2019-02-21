@@ -1,47 +1,47 @@
                     <div class="btn-group">
 
-                        <button type="button" class="btn btn-xs btn-warning"><i class="fa fa-gears" aria-hidden="true"></i>&nbsp;Ações</button>
+                        <button type="button" class="btn btn-xs btn-warning"><i class="fa fa-gears" aria-hidden="true"></i>&nbsp;Actions</button>
                         <button type="button" class="btn btn-xs btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu item" role="menu">
-                            <li><a id="view-revision" style="cursor:pointer;" data-toggle="modal" data-target="#revision-modal"><i class="fa fa-fw fa-history" aria-hidden="true"></i> Revisões</a></li>
+                            <li><a id="view-revision" style="cursor:pointer;" data-toggle="modal" data-target="#revision-modal"><i class="fa fa-fw fa-history" aria-hidden="true"></i> Revisions</a></li>
 
                             <li><a id="view-workflow" style="cursor:pointer;" data-toggle="modal" data-target="#workflow-modal"><i class="fa fa-fw fa-exchange" aria-hidden="true"></i> Workflow</a></li>
                             <li class="divider"></li>
 
-                            {{--<li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" --}}
-                            {{--data-title='Add Task'  data-url="{{guard_url('user/client/action/task/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> Add Task</a></li>--}}
+                            <li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" 
+                            data-title='Add Task'  data-url="{{guard_url('user/user/action/task/'.$user->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> Add Task</a></li>
 
-                            {{--<li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" --}}
-                            {{--data-title='Add Calendar'  data-url="{{guard_url('user/client/action/calendar/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Add Calendar</a></li>--}}
-                            {{--<li class="divider"></li>--}}
-
-                            <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/client/action/print/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-print" aria-hidden="true"></i> Imprimir</a></li>
-
-                            <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/client/action/pdf/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-file-pdf-o" aria-hidden="true"></i> Download PDF</a></li>
-
-                            <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/client/action/excel/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-file-excel-o" aria-hidden="true"></i> Download Excel</a></li>
+                            <li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" 
+                            data-title='Add Calendar'  data-url="{{guard_url('user/user/action/calendar/'.$user->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Add Calendar</a></li>
                             <li class="divider"></li>
 
-                            {{--<li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" --}}
-                            {{--data-title='Send mail to contact' data-url="{{guard_url('user/client/action/mail/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i> Send Mail</a></li>--}}
+                            <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/user/action/print/'.$user->getRouteKey())}}"><i class="fa fa-fw fa-print" aria-hidden="true"></i> Print</a></li>
 
-                            {{--<li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" --}}
-                            {{--data-title='Send SMS to contact' data-url="{{guard_url('user/client/action/sms/'.$client->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-comment-o" aria-hidden="true"></i> Send SMS</a></li>--}}
-                            {{--<li class="divider"></li>--}}
+                            <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/user/action/pdf/'.$user->getRouteKey())}}"><i class="fa fa-fw fa-file-pdf-o" aria-hidden="true"></i> Download PDF</a></li>
 
-                            <li><a class="action-clone" style="cursor:pointer;" data-method="GET" data-title="Clone" data-text="Do you want to duplicate this data?" data-url="{{guard_url('user/client/action/copy/'.$client->getRouteKey())}}"><i class="fa fa-fw fa-clone" aria-hidden="true"></i> Clonar</a></li>
+                            <li><a class="action-link" style="cursor:pointer;" data-url="{{guard_url('user/user/action/excel/'.$user->getRouteKey())}}"><i class="fa fa-fw fa-file-excel-o" aria-hidden="true"></i> Download Excel</a></li>
+                            <li class="divider"></li>
 
-                            <li><a class="action-method" data-method="POST" data-title="Archive" data-text="Do you want to change the status of this data?" data-url="{{guard_url('user/client/action/status/archive/'.$client->getRouteKey())}}" style="cursor:pointer;"><i class="fa fa-fw fa-archive" aria-hidden="true"></i> Arquivar</a></li>
+                            <li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" 
+                            data-title='Send mail to contact' data-url="{{guard_url('user/user/action/mail/'.$user->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i> Send Mail</a></li>
+
+                            <li><a class="action-modal" style="cursor:pointer;" data-toggle="modal" 
+                            data-title='Send SMS to contact' data-url="{{guard_url('user/user/action/sms/'.$user->getRouteKey())}}" data-target="#action-modal"><i class="fa fa-fw fa-comment-o" aria-hidden="true"></i> Send SMS</a></li>
+                            <li class="divider"></li>
+
+                            <li><a class="action-clone" style="cursor:pointer;" data-method="GET" data-title="Clone" data-text="Do you want to duplicate this data?" data-url="{{guard_url('user/user/action/copy/'.$user->getRouteKey())}}"><i class="fa fa-fw fa-clone" aria-hidden="true"></i> Clone</a></li>
+
+                            <li><a class="action-method" data-method="POST" data-title="Archive" data-text="Do you want to change the status of this data?" data-url="{{guard_url('user/user/action/status/archive/'.$user->getRouteKey())}}" style="cursor:pointer;"><i class="fa fa-fw fa-archive" aria-hidden="true"></i> Archive</a></li>
 
                         </ul>
                     </div>
-                    <button type="button" class="btn btn-success btn-sm" data-action='NEW' data-load-to='#user-client-entry' data-href="{{guard_url('user/client/create')}}"><i class="fa fa-plus-circle"></i> {{ trans('app.new') }}</button>
-                    @if($client->id )
-                    <button type="button" class="btn btn-primary btn-sm" data-action="EDIT" data-load-to='#user-client-entry' data-href="{{guard_url('user/client') }}/{{$client->getRouteKey()}}/edit"><i class="fa fa-pencil-square"></i> {{ trans('app.edit') }}</button>
-                    <button type="button" class="btn btn-danger btn-sm" data-action="DELETE" data-load-to='#user-client-entry' data-datatable='#user-client-list' data-href="{{guard_url('user/client') }}/{{$client->getRouteKey()}}" >
+                    <button type="button" class="btn btn-success btn-sm" data-action='NEW' data-load-to='#user-user-entry' data-href="{{guard_url('user/user/create')}}"><i class="fa fa-plus-circle"></i> {{ trans('app.new') }}</button>
+                    @if($user->id )
+                    <button type="button" class="btn btn-primary btn-sm" data-action="EDIT" data-load-to='#user-user-entry' data-href="{{guard_url('user/user') }}/{{$user->getRouteKey()}}/edit"><i class="fa fa-pencil-square"></i> {{ trans('app.edit') }}</button>
+                    <button type="button" class="btn btn-danger btn-sm" data-action="DELETE" data-load-to='#user-user-entry' data-datatable='#user-user-list' data-href="{{guard_url('user/user') }}/{{$user->getRouteKey()}}" >
                     <i class="fa fa-times-circle"></i> {{ trans('app.delete') }}
                     </button>
                     @endif
@@ -52,7 +52,7 @@
                                 <div class="modal-header" style="background-color: #dd4b39; color: #fff;">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                     <h4 class="modal-title">Add New Task</h4>
-                                    <div class="popup_description">For {{$client->name}}</div>
+                                    <div class="popup_description">For {{$user->name}}</div>
                                 </div>
                                 <div class="modal-body">
 
@@ -96,7 +96,7 @@ $( document ).ajaxComplete(function() {
                 success:function(data, textStatus, jqXHR)
                 {
                     swal("Copied!", 'Save the data after updation', "success");
-                    $('#user-client-entry').html(data);
+                    $('#user-user-entry').html(data);
                 }
             });
         });      
@@ -132,7 +132,7 @@ $( document ).ajaxComplete(function() {
                     success:function(data, textStatus, jqXHR)
                     {
                         swal(data.caption+"!", data.message, "success");
-                        $('#user-client-list').DataTable().ajax.reload( null, false );
+                        $('#user-user-list').DataTable().ajax.reload( null, false );
                         arrayids = [];
                     },
                     error:function(data, textStatus, jqXHR)
@@ -148,7 +148,7 @@ $( document ).ajaxComplete(function() {
 });
 </script>
 @php
-  $revisions    = $client->revisionHistory;
+  $revisions    = $user->revisionHistory;
 @endphp
 <div class="modal fade" id="revision-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg ">

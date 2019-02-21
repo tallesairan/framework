@@ -1,8 +1,8 @@
-<div class="btn-group user-client">
+<div class="btn-group user-user">
     <button class="btn btn-xs btn-danger btn-search" type="button">
         <i aria-hidden="true" class="fa fa-search">
         </i>
-        <span class="hidden-sm hidden-xs"> Buscar</span>
+        <span class="hidden-sm hidden-xs"> Search</span>
     </button>
     <button aria-expanded="false" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" type="button">
         <span class="caret">
@@ -16,32 +16,32 @@
             <a class="btn-search" style="cursor:pointer;">
                 <i aria-hidden="true" class="fa fa-fw fa-filter">
                 </i>
-                Mostrar Filtros
+                Show filters
             </a>
         </li>
         <li>
             <a class="btn-reset-filter" style="cursor:pointer;">
                 <i class="fa fa-fw fa-ban text-danger">
                 </i>
-                Limpar filtros
+                Clear filters
             </a>
         </li>
         <li class="divider">
         </li>
-        {{--<li>--}}
-            {{--<a class="btn-save" style="cursor:pointer;">--}}
-                {{--<i aria-hidden="true" class="fa fa-fw fa-floppy-o">--}}
-                {{--</i>--}}
-                {{--Salvar busca--}}
-            {{--</a>--}}
-        {{--</li>--}}
-        {{--<li>--}}
-            {{--<a class="btn-open" style="cursor:pointer;">--}}
-                {{--<i aria-hidden="true" class="fa fa-fw fa-folder-open-o">--}}
-                {{--</i>--}}
-                {{--Buscas salvas--}}
-            {{--</a>--}}
-        {{--</li>--}}
+        <li>
+            <a class="btn-save" style="cursor:pointer;">
+                <i aria-hidden="true" class="fa fa-fw fa-floppy-o">
+                </i>
+                Save search
+            </a>
+        </li>
+        <li>
+            <a class="btn-open" style="cursor:pointer;">
+                <i aria-hidden="true" class="fa fa-fw fa-folder-open-o">
+                </i>
+                Saved searches
+            </a>
+        </li>
     </ul>
 </div>
 
@@ -50,7 +50,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background-color: #dd4b39; color: #fff;">
               <button type="button" class="close" data-dismiss="modal" aaria-hidden="true">&times;</button>
-              <h4 class="modal-title">Buscar</h4>
+              <h4 class="modal-title">Search</h4>
             </div>
               {!!Form::horizontal_open()
               ->id('form-search')
@@ -64,7 +64,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[name]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.name')!!}
+                                        {!! trans('user::user.label.name')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[name]')->raw()!!}
@@ -75,7 +75,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[email]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.email')!!}
+                                        {!! trans('user::user.label.email')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[email]')->raw()!!}
@@ -86,7 +86,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[sex]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.sex')!!}
+                                        {!! trans('user::user.label.sex')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[sex]')->raw()!!}
@@ -97,7 +97,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[dob]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.dob')!!}
+                                        {!! trans('user::user.label.dob')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[dob]')->raw()!!}
@@ -107,8 +107,19 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
+                                    <label for="search[designation]" class="col-sm-2 control-label">
+                                        {!! trans('user::user.label.designation')!!}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {!! Form::text('search[designation]')->raw()!!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                     
                                     <label for="search[mobile]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.mobile')!!}
+                                        {!! trans('user::user.label.mobile')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[mobile]')->raw()!!}
@@ -119,7 +130,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[phone]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.phone')!!}
+                                        {!! trans('user::user.label.phone')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[phone]')->raw()!!}
@@ -129,19 +140,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
-                                    <label for="search[address]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.address')!!}
-                                    </label>
-                                    <div class="col-sm-10">
-                                        {!! Form::text('search[address]')->raw()!!}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                     
                                     <label for="search[street]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.street')!!}
+                                        {!! trans('user::user.label.street')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[street]')->raw()!!}
@@ -152,7 +152,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[city]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.city')!!}
+                                        {!! trans('user::user.label.city')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[city]')->raw()!!}
@@ -163,7 +163,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[district]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.district')!!}
+                                        {!! trans('user::user.label.district')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[district]')->raw()!!}
@@ -174,7 +174,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[state]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.state')!!}
+                                        {!! trans('user::user.label.state')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[state]')->raw()!!}
@@ -185,7 +185,7 @@
                                 <div class="form-group">
                                      
                                     <label for="search[country]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.country')!!}
+                                        {!! trans('user::user.label.country')!!}
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[country]')->raw()!!}
@@ -195,22 +195,22 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
-                                    <label for="search[photo]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.photo')!!}
+                                    <label for="search[web]" class="col-sm-2 control-label">
+                                        {!! trans('user::user.label.web')!!}
                                     </label>
                                     <div class="col-sm-10">
-                                        {!! Form::text('search[photo]')->raw()!!}
+                                        {!! Form::text('search[web]')->raw()!!}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
-                                    <label for="search[web]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.web')!!}
+                                    <label for="search[status]" class="col-sm-2 control-label">
+                                        {!! trans('user::user.label.status')!!}
                                     </label>
                                     <div class="col-sm-10">
-                                        {!! Form::text('search[web]')->raw()!!}
+                                        {!! Form::text('search[status]')->raw()!!}
                                     </div>
                                 </div>
                             </div>
@@ -223,12 +223,12 @@
                         <button aria-label="Close" class="btn pull-right btn-danger" data-dismiss="modal" type="button">
                             <i class="fa fa-times-circle">
                             </i>
-                            Fechar
+                            Close
                         </button>
                         <button class="btn btn-success pull-right " id="btn-apply-search" name="new" style="margin-right:1%" type="button">
                             <i class="fa fa-check-circle">
                             </i>
-                            Buscar
+                            Search
                         </button>
                     </div>
                 </div>
@@ -262,18 +262,18 @@
 <script type="text/javascript">
 $(document).ready(function(){
 
-    $(".user-client .btn-open").click(function(){
+    $(".user-user .btn-open").click(function(){
         toastr.info('This feature will be enabled soon.', 'Coming soon');
         return false;
-        $('#open-list').load("{!!guard_url('/settings/setting/search/user.client.search')!!}");
+        $('#open-list').load("{!!guard_url('/settings/setting/search/user.user.search')!!}");
         $('#modal-open').modal("show");
     });
 
-   $(".user-client .btn-search").click(function(){
+   $(".user-user .btn-search").click(function(){
       $('#modal-search').modal("show");
     });
    
-    $('.user-client .btn-save').click(function(e){
+    $('.user-user .btn-save').click(function(e){
         toastr.info('This feature will be enabled soon.', 'Coming soon');
         return false;
         var search = prompt("Please enter name for your search");
@@ -284,7 +284,7 @@ $(document).ready(function(){
         var formData = new FormData();
         formData.append('value', $("#form-search").serialize());
         formData.append('name', search);
-        formData.append('key', 'user.client.search');
+        formData.append('key', 'user.user.search');
         formData.append('package', 'Page');
         formData.append('module', 'Page');
 
@@ -310,13 +310,13 @@ $(document).ready(function(){
 
     $('#btn-apply-search').click( function() {
         oSearch = {};
-        $('#form-search input,#form-search select').each( function () {
+        $('#form-search input, #form-search select').each( function () {
           key = $(this).attr('name');
           val = $(this).val();
           oSearch[key] = val;
         });
         oTable.api().draw();
-        $('#user-client-list .btn-reset-filter').css('display', '');
+        $('#user-user-list .btn-reset-filter').css('display', '');
         $('#modal-search').modal("hide");
         
       });
@@ -331,7 +331,7 @@ $(document).ready(function(){
           oSearch[key] = val;
         });
         oTable.api().draw();
-        $('#user-client-list .btn-reset-filter').css('display', 'none');
+        $('#user-user-list .btn-reset-filter').css('display', 'none');
 
     });
 
