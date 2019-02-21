@@ -25,12 +25,4 @@ interface UserPolicy
      */
     public function canDo($permission);
 
-    /**
-     * Check if the user has expirated.
-     *
-     * @param int|string|array $permission
-     *
-     * @return bool
-     */
-    public function hasExpired($days);
 }

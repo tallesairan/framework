@@ -11,11 +11,10 @@ use Litepie\Repository\Traits\PresentableTrait;
 use Litepie\Roles\Traits\CheckRoleAndPermission;
 use Litepie\User\Contracts\UserPolicy;
 use Litepie\User\Traits\User as UserProfile;
-use Litepie\User\Traits\Client as ClientRules;
 
 class Client extends Model implements UserPolicy
 {
-    use Filer, Notifiable, CheckRoleAndPermission, UserProfile, ClientRules, SoftDeletes, Hashids, PresentableTrait;
+    use Filer, Notifiable, CheckRoleAndPermission, UserProfile, SoftDeletes, Hashids, PresentableTrait;
     /**
      * Configuartion for the model.
      *

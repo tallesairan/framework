@@ -23,9 +23,11 @@ class ClientResourceController extends BaseController
      */
     public function __construct(ClientRepositoryInterface $client, $type = null)
     {
-        if (!in_array(request('type', 'client'), config('users.types'))) {
+  
+      if (!in_array(request('type', 'client'), config('users.types'))) {
             abort(404);
         }
+        
         parent::__construct();
         $this->repository = $client;
         $this->repository

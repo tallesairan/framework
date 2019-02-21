@@ -19,7 +19,8 @@ class CreateClientsTable extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->integer('reporting_to')->nullable()->default(0);
-            $table->string('name', 100)->nullable();
+            $table->string('firstName', 100)->nullable();
+            $table->string('lastName', 100)->nullable();
             $table->string('email', 100)->unique();
             $table->string('password', 100);
             $table->string('api_token', 60)->unique();
@@ -30,10 +31,10 @@ class CreateClientsTable extends Migration
             $table->string('designation', 50)->nullable();
             $table->string('mobile', 100)->nullable();
             $table->string('phone', 100)->nullable();
-            $table->string('address', 255)->nullable();
-            $table->string('street', 100)->nullable();
+            $table->string('billingAddres1', 255)->nullable();
+            $table->string('billingAddres2', 100)->nullable();
             $table->string('city', 100)->nullable();
-            $table->string('district', 100)->nullable();
+            $table->string('postcode', 100)->nullable();
             $table->string('state', 100)->nullable();
             $table->integer('country')->nullable();
             $table->string('photo', 500)->nullable();
