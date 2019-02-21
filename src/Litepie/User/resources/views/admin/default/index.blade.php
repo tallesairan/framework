@@ -30,8 +30,8 @@
                 <table id="user-client-list" class="table table-striped data-table">
                     <thead class="list_head">
                         <th style="text-align: right;" width="1%"><a class="btn-reset-filter" href="#Reset" style="display:none; color:#fff;"><i class="fa fa-filter"></i></a> <input type="checkbox" id="user-client-check-all"></th>
-                        <th data-field="firstName">Nome</th>
-                        <th data-field="lastName">Sobrenome</th>
+                        <th data-field="firstName">{!! trans('user::client.label.firstName')!!}</th>
+                        <th data-field="lastName">{!! trans('user::client.label.lastName')!!}</th>
                     <th data-field="email">{!! trans('user::client.label.email')!!}</th>
                     {{--<th data-field="sex">{!! trans('user::client.label.sex')!!}</th>--}}
                     {{--<th data-field="dob">{!! trans('user::client.label.dob')!!}</th>--}}

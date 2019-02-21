@@ -13,6 +13,7 @@
             ->id('user-' . $type . '-create')
             ->method('POST')
             ->files('true')
+            ->autocomplete('off')
             ->action(guard_url('user/' . $type))!!}
             <div class="tab-pane active" id="details">
                 <div class="tab-pan-title">  {{ trans('app.new') }}  [{!! trans('user::client.name', ['client' => $type]) !!}] </div>

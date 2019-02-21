@@ -6,6 +6,7 @@
                                 <button type="button" class="btn btn-success btn-sm" data-action='NEW' data-load-to='#user-client-entry' data-href='{{guard_url('user/' . $type . '/create')}}'><i class="fa fa-plus-circle"></i> {{ trans('app.new') }}</button>
                 @if($client->id )
                 <button type="button" class="btn btn-primary btn-sm" data-action="EDIT" data-load-to='#user-client-entry' data-href='{{ guard_url('user/' . $type) }}/{{$client->getRouteKey()}}/edit'><i class="fa fa-pencil-square"></i> {{ trans('app.edit') }}</button>
+                <button type="button" class="btn btn-warning btn-sm expiryLogin" data-action="EXPIRY" data-load-to='#user-client-entry' data-clientId='{{$client->id}}' href='#'><i class="fa fa-clock-o"></i> Expirar Login</button>
                 <button type="button" class="btn btn-danger btn-sm" data-action="DELETE" data-load-to='#user-client-entry' data-datatable='#user-client-list' data-href='{{ guard_url('user/' . $type) }}/{{$client->getRouteKey()}}' >
                 <i class="fa fa-times-circle"></i> {{ trans('app.delete') }}
                 </button>

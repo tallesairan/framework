@@ -26,7 +26,11 @@ class CreateClientsTable extends Migration
             $table->string('api_token', 60)->unique();
             $table->string('remember_token', 255)->nullable();
             $table->string('sex', 233)->nullable();
+            $table->string('company', 233)->nullable();
             $table->string('dob',233)->nullable();
+            $table->string('cpf',233)->nullable();
+            $table->string('cnpj',233)->nullable();
+            $table->string('personType',233)->nullable();
             $table->integer('expiry',233)->nullable();
             $table->string('designation', 50)->nullable();
             $table->string('mobile', 100)->nullable();

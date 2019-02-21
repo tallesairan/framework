@@ -63,11 +63,22 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
-                                    <label for="search[name]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.name')!!}
+                                    <label for="search[firstName]" class="col-sm-2 control-label">
+                                        {!! trans('user::client.label.firstName')!!}
                                     </label>
                                     <div class="col-sm-10">
-                                        {!! Form::text('search[name]')->raw()!!}
+                                        {!! Form::text('search[firstName]')->raw()!!}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+
+                                    <label for="search[lastName]" class="col-sm-2 control-label">
+                                        {!! trans('user::client.label.lastName')!!}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {!! Form::text('search[lastName]')->raw()!!}
                                     </div>
                                 </div>
                             </div>
@@ -82,28 +93,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                     
-                                    <label for="search[sex]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.sex')!!}
-                                    </label>
-                                    <div class="col-sm-10">
-                                        {!! Form::text('search[sex]')->raw()!!}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                     
-                                    <label for="search[dob]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.dob')!!}
-                                    </label>
-                                    <div class="col-sm-10">
-                                        {!! Form::text('search[dob]')->raw()!!}
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
@@ -129,22 +119,22 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
-                                    <label for="search[address]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.address')!!}
+                                    <label for="search[billingAddress1]" class="col-sm-2 control-label">
+                                        {!! trans('user::client.label.billingAddress1')!!}
                                     </label>
                                     <div class="col-sm-10">
-                                        {!! Form::text('search[address]')->raw()!!}
+                                        {!! Form::text('search[billingAddress1]')->raw()!!}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
-                                    <label for="search[street]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.street')!!}
+                                    <label for="search[billingAddress2]" class="col-sm-2 control-label">
+                                        {!! trans('user::client.label.billingAddress2')!!}
                                     </label>
                                     <div class="col-sm-10">
-                                        {!! Form::text('search[street]')->raw()!!}
+                                        {!! Form::text('search[billingAddress2]')->raw()!!}
                                     </div>
                                 </div>
                             </div>
@@ -162,11 +152,11 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                      
-                                    <label for="search[district]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.district')!!}
+                                    <label for="search[postcode]" class="col-sm-2 control-label">
+                                        {!! trans('user::client.label.postcode')!!}
                                     </label>
                                     <div class="col-sm-10">
-                                        {!! Form::text('search[district]')->raw()!!}
+                                        {!! Form::text('search[postcode]')->raw()!!}
                                     </div>
                                 </div>
                             </div>
@@ -178,39 +168,6 @@
                                     </label>
                                     <div class="col-sm-10">
                                         {!! Form::text('search[state]')->raw()!!}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                     
-                                    <label for="search[country]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.country')!!}
-                                    </label>
-                                    <div class="col-sm-10">
-                                        {!! Form::text('search[country]')->raw()!!}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                     
-                                    <label for="search[photo]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.photo')!!}
-                                    </label>
-                                    <div class="col-sm-10">
-                                        {!! Form::text('search[photo]')->raw()!!}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                     
-                                    <label for="search[web]" class="col-sm-2 control-label">
-                                        {!! trans('user::client.label.web')!!}
-                                    </label>
-                                    <div class="col-sm-10">
-                                        {!! Form::text('search[web]')->raw()!!}
                                     </div>
                                 </div>
                             </div>
