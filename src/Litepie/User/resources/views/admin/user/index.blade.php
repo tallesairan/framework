@@ -21,10 +21,10 @@
                     <span class="actions">
                     <!--   
                     <a  class="btn btn-xs btn-purple"  href="{!!guard_url('user/user/reports')!!}"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-sm hidden-xs"> Reports</span></a>
-                    @include('user::admin.user.partial.actions')
+                    {{--@include('user::admin.user.partial.actions')--}}
                     -->
-                    @include('user::admin.user.partial.filter')
-                    @include('user::admin.user.partial.column')
+                    {{--@include('user::admin.user.partial.filter')--}}
+                    {{--@include('user::admin.user.partial.column')--}}
                     </span> 
                 </li>
             </ul>
@@ -34,18 +34,18 @@
                         <th style="text-align: right;" width="1%"><a class="btn-reset-filter" href="#Reset" style="display:none; color:#fff;"><i class="fa fa-filter"></i></a> <input type="checkbox" id="user-user-check-all"></th>
                         <th>{!! trans('user::user.label.name')!!}</th>
                     <th>{!! trans('user::user.label.email')!!}</th>
-                    <th>{!! trans('user::user.label.sex')!!}</th>
-                    <th>{!! trans('user::user.label.dob')!!}</th>
+                    {{--<th>{!! trans('user::user.label.sex')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.dob')!!}</th>--}}
                     {{--<th>{!! trans('user::user.label.designation')!!}</th>--}}
-                    <th>{!! trans('user::user.label.mobile')!!}</th>
-                    <th>{!! trans('user::user.label.phone')!!}</th>
-                    <th>{!! trans('user::user.label.street')!!}</th>
-                    <th>{!! trans('user::user.label.city')!!}</th>
-                    <th>{!! trans('user::user.label.district')!!}</th>
-                    <th>{!! trans('user::user.label.state')!!}</th>
-                    <th>{!! trans('user::user.label.country')!!}</th>
-                    <th>{!! trans('user::user.label.web')!!}</th>
-                    <th>{!! trans('user::user.label.status')!!}</th>
+                    {{--<th>{!! trans('user::user.label.mobile')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.phone')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.street')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.city')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.district')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.state')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.country')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.web')!!}</th>--}}
+                    {{--<th>{!! trans('user::user.label.status')!!}</th>--}}
                     </thead>
                 </table>
             </div>
@@ -95,18 +95,18 @@ $(document).ready(function(){
             {data :'id'},
             {data :'name'},
             {data :'email'},
-            {data :'sex'},
-            {data :'dob'},
+            // {data :'sex'},
+            // {data :'dob'},
             // {data :'designation'},
-            {data :'mobile'},
-            {data :'phone'},
-            {data :'street'},
-            {data :'city'},
-            {data :'district'},
-            {data :'state'},
-            {data :'country'},
-            {data :'web'},
-            {data :'status'},
+            // {data :'mobile'},
+            // {data :'phone'},
+            // {data :'street'},
+            // {data :'city'},
+            // {data :'district'},
+            // {data :'state'},
+            // {data :'country'},
+            // {data :'web'},
+            // {data :'status'},
         ],
         "pageLength": 25
     });

@@ -69,6 +69,6 @@ return [
      * Texts  for the module
      */
     'text'          => [
-        'preview' => 'Click on the below list for preview',
+        'preview' => 'Clique em um item para visualizar',
     ],
 ];

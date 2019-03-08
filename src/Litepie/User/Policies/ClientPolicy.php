@@ -52,7 +52,7 @@ class ClientPolicy
      *
      * @return bool
      */
-    public function update(User $user, UserModal $usermodal)
+    public function update(User $user, UserPolicy $usermodal)
     {
         if ($user->canDo('user.'.request('type', 'client').'.view') && $user->isAdmin()) {
             return true;
@@ -69,7 +69,7 @@ class ClientPolicy
      *
      * @return bool
      */
-    public function destroy(User $user, UserModal $usermodal)
+    public function destroy(User $user, UserPolicy $usermodal)
     {
         if ($user->canDo('user.'.request('type', 'client').'.view') && $user->isAdmin()) {
             return true;

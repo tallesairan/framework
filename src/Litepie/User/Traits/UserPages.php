@@ -99,7 +99,7 @@ trait UserPages
         $user = $request->user(guard());
         Form::populate($user);
 
-        return $this->response->setMetaTitle('Profile')
+        return $this->response->setMetaTitle('Perfil')
             ->view('user.profile')
             ->data(compact('user'))
             ->output();
@@ -117,15 +117,20 @@ trait UserPages
         $user = $request->user();
 
         $this->validate($request, [
-            'name' => 'required|min:3',
+            'firstName' => 'required|min:3',
+            'lastName' => 'required|min:3',
+            'phone' => 'required|min:3|max:16',
+            'mobile' => 'required|min:3|max:16',
+//            'cpf' => 'required|min:3',
+//            'cnpj' => 'required|min:3',
         ]);
 
         $user->fill($request->all());
 
         if ($user->save()) {
-            return redirect()->back()->withMessage('Profile updated successfully.')->withCode(201);
+            return redirect()->back()->withMessage('Perfil atualizado com sucesso.')->withCode(201);
         } else {
-            return redirect()->back()->withMessage('Error while updating profile.')->withCode(400);
+            return redirect()->back()->withMessage('Erro ao atualizar perfil.')->withCode(400);
         }
     }
 
@@ -137,7 +142,7 @@ trait UserPages
     public function locked()
     {
         return $this->response
-            ->setMetaTitle('Locked')
+            ->setMetaTitle('Bloqueado')
             ->layout('blank')
             ->view('user.locked')
             ->output();

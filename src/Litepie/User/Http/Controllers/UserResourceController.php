@@ -130,7 +130,12 @@ class UserResourceController extends BaseController
             $attributes['user_type'] = user_type();
             $attributes['api_token'] = str_random(60);
             $user = $this->repository->create($attributes);
-
+            $roles = $request->get('roles');
+            $permissions = $request->get('permissions');
+    
+            $user->update($attributes);
+            $user->userPermissions()->sync($permissions);
+            $user->roles()->sync($roles);
             return $this->response->message(trans('messages.success.created', ['Module' => trans('user::user.name')]))
                 ->code(204)
                 ->status('success')
@@ -178,6 +183,7 @@ class UserResourceController extends BaseController
             $attributes = $request->all();
             $roles = $request->get('roles');
             $permissions = $request->get('permissions');
+  
             $user->update($attributes);
             $user->userPermissions()->sync($permissions);
             $user->roles()->sync($roles);

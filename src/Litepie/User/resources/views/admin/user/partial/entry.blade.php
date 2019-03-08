@@ -17,19 +17,21 @@
             -> disabled(true)
             -> placeholder(trans('user::user.placeholder.password')) !!}
         </div>
-        <div class='col-md-12 col-sm-12'>
-            {!! Form::text('designation')
-            -> label(trans('user::user.label.designation'))
-            -> placeholder(trans('user::user.placeholder.designation')) !!}
-        </div>
-        <div class='col-md-12 col-sm-12'>
-            {!! Form::tel('mobile')
-            -> label(trans('user::user.label.mobile'))
-            -> placeholder(trans('user::user.placeholder.mobile')) !!}
-        </div>        </div>
+        {{--<div class='col-md-12 col-sm-12'>--}}
+            {{--{!! Form::text('designation')--}}
+            {{---> label(trans('user::user.label.designation'))--}}
+            {{---> placeholder(trans('user::user.placeholder.designation')) !!}--}}
+        {{--</div>--}}
+        {{--<div class='col-md-12 col-sm-12'>--}}
+            {{--{!! Form::tel('mobile')--}}
+            {{---> label(trans('user::user.label.mobile'))--}}
+            {{---> placeholder(trans('user::user.placeholder.mobile')) !!}--}}
+        {{--</div>        --}}
+
+    </div>
     <div  class='col-md-9 col-sm-9'>
     <div class='col-md-12 col-sm-12'>
-    <strong>Roles</strong><br/>
+    <strong>Cargos</strong><br/>
     @foreach ($roles as $role)
         <div class="col-md-2">
             <div class="checkbox checkbox-danger" >
@@ -40,24 +42,25 @@
     @endforeach
     </div>
 
-    <div class='col-md-6 col-sm-12'>
-    <br/> <strong>Permissions</strong><br/>
+    <div class='col-md-6 col-sm-12 hidden'>
+    <br/> <strong>Permissões</strong><br/>
       <div class="treeview" style="height:250px;overflow:auto;">
           <ul style="margin-left:-40px;">
               @foreach($permissions as $package => $modules)
                   <li>
                   <input name="permissions[{{$package}}]" id="permissions_{{$package}}" type="checkbox" {{ @array_key_exists($package, $role->permissions) ? 'checked' : '' }} value='1'>
-                  <label for="permissions_{{$package}}">{{ucfirst($package)}}</label>
+                  <label for="permissions_{{$package}}">{{trans('user::user.label.'.$package)}}</label>
                   <ul>
                   @foreach($modules as $module => $permissions)
+
                       <li>
                       <input name="permissions[{{$package}}.{{$module}}]" id="permissions_{{$package}}_{{$module}}" type="checkbox" {{ @array_key_exists($package. '.' . $module, $user->permissions) ? 'checked' : '' }} value='1'>
-                      <label for="permissions_{{$package}}_{{$module}}">{{ucfirst($module)}}</label>
+                      <label for="permissions_{{$package}}_{{$module}}">{{trans('user::user.label.'.$module)}}</label>
                           <ul class="clearfix">
                           @foreach($permissions as $permission => $value)
                               <li style="float:left; margin-right: 10px;">
                                   <input name="permissions[]" id="permissions_{{$package}}_{{$module}}_{{$permission}}" type="checkbox" {{ (!$user->hasPermission($package. '.' . $module . '.' . $permission)) ? : 'checked'}} value='{{$value}}'>
-                                  <label for="permissions_{{$package}}_{{$module}}_{{$permission}}">{{ucfirst($permission)}} </label>
+                                  <label for="permissions_{{$package}}_{{$module}}_{{$permission}}">{{trans('user::user.label.'.$permission)}} </label>
                               </li>
                           @endforeach
                           </ul>

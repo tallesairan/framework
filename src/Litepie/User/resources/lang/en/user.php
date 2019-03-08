@@ -60,6 +60,13 @@ return [
      */
     'label'                 => [
         'activated'                 => 'Ativo',
+        'product'                 => 'Estampas',
+        'category'                 => 'Categoria',
+        'order'                 => 'Pedido',
+        'create'                 => 'Criar',
+        'delete'                 => 'Deletar',
+        'edit'                 => 'Editar',
+        'view'                 => 'Visualizar',
         'address'                   => 'Endereço',
         'city'                      => 'Cidade',
         'country'                   => 'Pais',
