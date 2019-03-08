@@ -17,3 +17,5 @@ Route::group([
 });
 
 Route::get('profile/{user}', 'UserPublicController@profile');
+
+Route::get('client/orders', 'UserPublicController@orders')->name('client.order');
