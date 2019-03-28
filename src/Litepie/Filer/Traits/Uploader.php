@@ -138,11 +138,11 @@ trait Uploader
      */
     public function verifyUploadType(UploadedFile $file)
     {
-        if (!in_array($file->getMimeType(), config('filer.allowed_types')) && config('filer.allowed_types_check')) {
-            throw new FileException('Invalid file type.');
-        } elseif (!in_array(strtolower($file->getClientOriginalExtension()), config('filer.allowed_extensions')) && config('filer.allowed_extensions_check')) {
-            throw new FileException('Invalid file extension.');
-        }
+//        if (!in_array($file->getMimeType(), config('filer.allowed_types')) && config('filer.allowed_types_check')) {
+//            throw new FileException('Invalid file type.');
+//        } elseif (!in_array(strtolower($file->getClientOriginalExtension()), config('filer.allowed_extensions')) && config('filer.allowed_extensions_check')) {
+//            throw new FileException('Invalid file extension.');
+//        }
     }
 
     /**
