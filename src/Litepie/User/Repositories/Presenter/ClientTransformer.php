@@ -23,6 +23,7 @@ class ClientTransformer extends TransformerAbstract
             'personType'           => $client->personType,
             'company'           => $client->company,
             'expiry'           => $client->expiry,
+            'expired'           => 1,
             'mobile'            => $client->mobile,
             'phone'             => $client->phone,
             'billingAddress1'           => $client->billingAddress1,

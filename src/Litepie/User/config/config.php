@@ -122,6 +122,7 @@
           'mobile',
           'personType',
           'password_changed_at',
+          'expired',
           'expiry',
           'cpf',
           'cnpj',
